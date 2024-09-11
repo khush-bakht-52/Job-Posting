@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Job Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recruiter Job Platform</h1>
+    </header>
+
+    <main>
+        <div id="admin-section">
+            <h2>Admin Panel</h2>
+            <p>Manage recruiters and jobs.</p>
+            <ul id="recruiter-list">
+                <!-- Predefined recruiters will be listed here -->
+            </ul>
+            <button onclick="showRecruiterRequests()">View Recruiter Requests</button>
+            <button onclick="showJobList()">View Job List</button>
+        </div>
+
+        <div id="signup-section">
+            <h2>Recruiter Signup</h2>
+            <form id="signup-form">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" required>
+                
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+                
+                <button type="button" onclick="signUpRecruiter()">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="recruiter-section">
+            <h2>Recruiter Dashboard</h2>
+            <form id="post-job-form">
+                <h3>Post a Job</h3>
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" name="job-title" required>
+
+                <label for="job-salary">Salary (PKR):</label>
+                <input type="number" id="job-salary" name="job-salary" required>
+
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" name="job-description" required></textarea>
+
+                <label for="job-experience">Required Experience:</label>
+                <input type="text" id="job-experience" name="job-experience" required>
+
+                <label for="job-incentive">Incentive (PKR):</label>
+                <input type="number" id="job-incentive" name="job-incentive" required>
+
+                <button type="button" onclick="postJob()">Post Job</button>
+            </form>
+
+            <button onclick="viewPostedJobs()">View My Jobs</button>
+        </div>
+
+        <div id="job-list-section">
+            <h3>Available Jobs</h3>
+            <ul id="job-list">
+                <!-- Jobs will be listed here -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
